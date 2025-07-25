@@ -1,4 +1,5 @@
 ﻿using Advainced.Example1;
+using System.Collections;
 
 namespace Advainced
 {
@@ -41,14 +42,35 @@ namespace Advainced
             //int result = Helper<int>.linearSearch(arr, 3);
             //Console.WriteLine($"index of target value = {result}");
 
-            Employy employy01 = new Employy(1,1000,"sameh");
-            Employy employy02 = new Employy(1,1000,"sameh");
-            Console.WriteLine(employy01.GetHashCode());
-            Console.WriteLine(employy02.GetHashCode());
-            if (employy01 == employy02)
-                Console.WriteLine($"Equal");
-            else
-                Console.WriteLine($"Not equal");
+            //Employy employy01 = new Employy(1,1000,"sameh");
+            //Employy employy02 = new Employy(1,1000,"sameh");
+            //Console.WriteLine(employy01.GetHashCode());
+            //Console.WriteLine(employy02.GetHashCode());
+            //if (employy01 == employy02)
+            //    Console.WriteLine($"Equal");
+            //else
+            //    Console.WriteLine($"Not equal");
+            #endregion
+
+
+            #region example-3 Equality and GetHashCode
+            //Employy employy01 = new Employy(1,1000, "sameh");
+            //Employy employy02 = new Employy(1, 1000, "sameh");
+            //Console.WriteLine(employy01.GetHashCode());
+            //Console.WriteLine(employy02.GetHashCode());
+
+            //var table = new Hashtable();
+            //table[employy01] = "Dev;";
+            //Console.WriteLine(table[employy02] );
+
+            String name01 = "sameh";
+            string name02 = "sameh";
+            Console.WriteLine(name01.GetHashCode());
+            Console.WriteLine(name02.GetHashCode());
+
+
+
+
             #endregion
 
         }

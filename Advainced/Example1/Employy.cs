@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Advainced.Example1
 {
-    internal struct Employy
+    internal class Employy
     {
         #region Ctor
         public Employy(int id, decimal salary, string name)
@@ -32,7 +32,7 @@ namespace Advainced.Example1
         #endregion
 
 
-        #region
+        #region Override 
         public static bool operator == (Employy left, Employy right)
         {
            // return left.Id ==right.Id && left.Salary ==right.Salary && left.Name ==right.Name ;
