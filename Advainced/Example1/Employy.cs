@@ -49,5 +49,33 @@ namespace Advainced.Example1
 
 
 
+        #region Is 
+        //public override bool Equals(object? obj)
+        //{
+        //    if (obj is null) return false;
+        //    else if (obj is Employy employy)
+        //        return this.Id == employy.id && this.Name == employy.Name && this.Salary == employy.Salary ;
+
+
+        //}
+        #endregion
+
+
+        #region As
+        public override bool Equals(object? obj)
+        {
+            Employy? employy = obj as Employy;
+            if(employy is null)return false;
+            else
+                return this.Id == employy.id && this.Name == employy.Name && this.Salary == employy.Salary;
+
+
+        }
+
+        #endregion
+
+
+
+
     }
 }

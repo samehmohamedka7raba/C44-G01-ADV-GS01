@@ -63,11 +63,22 @@ namespace Advainced
             //table[employy01] = "Dev;";
             //Console.WriteLine(table[employy02] );
 
-            String name01 = "sameh";
-            string name02 = "sameh";
-            Console.WriteLine(name01.GetHashCode());
-            Console.WriteLine(name02.GetHashCode());
+            //String name01 = "sameh";
+            //string name02 = "sameh";
+            //Console.WriteLine(name01.GetHashCode());
+            //Console.WriteLine(name02.GetHashCode());
 
+
+
+
+            #endregion
+
+
+            #region Is -As 
+
+            Employy employy01 = new Employy(1, 1000, "sameh");
+            Employy employy02 = new Employy(2, 1000, "sameh");
+            Console.WriteLine(employy01.Equals(employy02));
 
 
 
