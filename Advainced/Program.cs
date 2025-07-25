@@ -76,13 +76,40 @@ namespace Advainced
 
             #region Is -As 
 
-            Employy employy01 = new Employy(1, 1000, "sameh");
-            Employy employy02 = new Employy(2, 1000, "sameh");
-            Console.WriteLine(employy01.Equals(employy02));
+            //Employy employy01 = new Employy(1, 1000, "sameh");
+            //Employy employy02 = new Employy(2, 1000, "sameh");
+            //Console.WriteLine(employy01.Equals(employy02));
 
 
 
             #endregion
+
+
+            #region 6
+            //int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, };
+            //Helper<int>.BubbleSort(arr);
+            //foreach (int i in arr) 
+            //    Console.WriteLine($"{i}");
+
+
+
+
+            Employy[] employys =
+            {
+                new Employy(1,1000,"sameh"),
+                new Employy(1,2000,"zaik"),
+                new Employy(1,3000,"ahmed"),
+            };
+
+            Helper<Employy>.BubbleSort()
+
+
+
+
+            #endregion
+
+
+
 
         }
     }

@@ -46,9 +46,6 @@ namespace Advainced.Example1
         }
         #endregion
 
-
-
-
         #region Is 
         //public override bool Equals(object? obj)
         //{
@@ -59,18 +56,16 @@ namespace Advainced.Example1
 
         //}
         #endregion
-
-
         #region As
-        public override bool Equals(object? obj)
-        {
-            Employy? employy = obj as Employy;
-            if(employy is null)return false;
-            else
-                return this.Id == employy.id && this.Name == employy.Name && this.Salary == employy.Salary;
+        //public override bool Equals(object? obj)
+        //{
+        //    Employy? employy = obj as Employy;
+        //    if(employy is null)return false;
+        //    else
+        //        return this.Id == employy.id && this.Name == employy.Name && this.Salary == employy.Salary;
 
 
-        }
+        //}
 
         #endregion
 

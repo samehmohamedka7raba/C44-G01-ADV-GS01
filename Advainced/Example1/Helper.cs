@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Advainced.Example1
 {
-    internal static class Helper<T>
+    internal static class Helper<T> , IComparable<T>
     {
         #region swap v1
 
@@ -62,20 +62,74 @@ namespace Advainced.Example1
 
 
         #region linear search -Generic
-            public static int linearSearch(T[] arr, T value)
-            {
-                if (arr is not null && arr.Length > 0)
-               {
-                    for (int i = 0; i < arr.Length; i++)
-                    {
-                        if (arr[i] == value)
-                            return i;
-                    }
+        //public static int linearSearch(T[] arr, T value)
+        //{
+        //    if (arr is not null && arr.Length > 0)
+        //   {
+        //        for (int i = 0; i < arr.Length; i++)
+        //        {
+        //            if (arr[i] == value)
+        //                return i;
+        //        }
 
+        //    }
+        //    return -1;
+        //}
+
+        #endregion
+
+
+        #region Bubble sort
+        //public static void BubbleSort(int[] arr)
+        //{
+        //    if (arr is not null && arr.Length > 0)
+        //    {
+        //        for(int i = 0; i < arr.Length; i++)
+        //        {
+        //            for (int j = 0; j < arr.Length - 1; j++)
+        //            {
+        //                if (arr[j] > arr[j +1])
+        //                    Helper<int>.SWAP(ref arr[j], ref arr[j +1]);
+        //            }
+        //        }
+        //    }
+        //}
+
+
+
+
+        #region  Bubble sort generic
+
+        public static void BubbleSort(T[] arr)
+        {
+            if (arr is not null && arr.Length > 0)
+            {
+                for (int i = 0; i < arr.Length; i++)
+                {
+                    for (int j = 0; j < arr.Length - 1; j++)
+                    {
+                        if (arr[j].CompareTo( arr[j + 1]) > 0)
+                            Helper<T>.SWAP(ref arr[j], ref arr[j + 1]);
+                    }
                 }
-                return -1;
             }
-        
+        }
+
+
+
+        #endregion
+
+
+
+
+
+
+
+
+
+
+
+
         #endregion
 
 
