@@ -6,41 +6,82 @@ using System.Threading.Tasks;
 
 namespace Advainced.Example1
 {
-    internal static class Helper
+    internal static class Helper<T>
     {
-        #region swap
+        #region swap v1
 
-        public static void SWAP(ref int x, ref int y)
-        {
-            int temp = x;
-            x = y;
-            y = temp;
-        }
+        //public static void SWAP(ref int x, ref int y)
+        //{
+        //    int temp = x;
+        //    x = y;
+        //    y = temp;
+        //}
 
-        public static void SWAP(ref decimal x, ref decimal y)
-        {
-            decimal temp = x;
-            x = y;
-            y = temp;
-        }
+        //public static void SWAP(ref decimal x, ref decimal y)
+        //{
+        //    decimal temp = x;
+        //    x = y;
+        //    y = temp;
+        //}
 
-        public static void SWAP(ref Point x, ref Point y)
-        {
-            Point temp = x;
-            x = y;
-            y = temp;
-        }
+        //public static void SWAP(ref Point x, ref Point y)
+        //{
+        //    Point temp = x;
+        //    x = y;
+        //    y = temp;
+        //}
         #endregion
 
 
-        #region SWAP - GENRIC
-        public static void SWAP<T>(ref T x, ref T y)
+        #region SWAP - GENRIC v1
+        public static void SWAP(ref T x, ref T y)
         {
             T temp = x;
             x = y;
             y = temp;
         }
         #endregion
+
+
+        #region linear search v2
+        //public static int linearSearch(int[] arr, int value)
+        //{
+        //    if (arr is not null && arr.Length > 0)
+        //    {
+        //        for (int i = 0; i < arr.Length; i++)
+        //        {
+        //            if (arr[i] == value)
+        //                return i;
+        //        }
+
+        //    }
+        //    return -1;
+        //}
+
+        #endregion
+
+
+        #region linear search -Generic
+            public static int linearSearch(T[] arr, T value)
+            {
+                if (arr is not null && arr.Length > 0)
+               {
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        if (arr[i] == value)
+                            return i;
+                    }
+
+                }
+                return -1;
+            }
+        
+        #endregion
+
+
+
+
+
 
 
 
